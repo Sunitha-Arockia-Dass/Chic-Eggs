@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <section class="start-screen">
-<section class="header">
-    <div class="title">Moon & Stars </div>
-   </section>
-   <section class="container">
-    
-    <h1 class="mint"> Choose your level   </h1>
-     
-    
-    <div class="level">
-        <button class="grays glossy-button glossy-button--green">Easy</button>
-        <button class="grays glossy-button glossy-button--blue">Medium</button>
-        <button class="grays glossy-button glossy-button--gold">Hard</button>
-        <button class="grays glossy-button glossy-button--red">Extreme</button>
+  </head>
+  <body>
+    <!-- Game start screen starts-->
+    <section id="start-screen">
+      <section class="header">
+        <div class="title">Moon & Stars</div>
+      </section>
+      <section class="container">
+        <h1 class="mint">Choose your level</h1>
+
+        <div class="level">
+          <button class="grays glossy-button button-green">Easy</button>
+          <button class="grays glossy-button button-blue">
+            Medium
+          </button>
+          <button class="grays glossy-button button-gold">Hard</button>
+          <button class="grays glossy-button button-red">
+            Extreme
+          </button>
+        </div>
+      </section>
+    </section>
+    <!-- Game start screen ends-->
+
+    <!-- Game screen starts-->
+    <section id="game-screen">
+        <!--Easy starts-->
+      <div id="easy-level">
+        <span class="first yellow-box">?</span>
+        <span class="second yellow-box">?</span>
+        <span class="third yellow-box">?</span>
+      </div>
+      <!-- Medium starts-->
+      <div id="medium-level">
+      <span class="first yellow-box">?</span>
+      <span class="second yellow-box">?</span>
+      <span class="third yellow-box">?</span>
+      <span class="fourth yellow-box">?</span>
     </div>
+    <!-- Hard starts-->
+      <div id="hard-level">
+      <span class="first yellow-box">?</span>
+      <span class="second yellow-box">?</span>
+      <span class="third yellow-box">?</span>
+      <span class="fourth yellow-box">?</span>
+      <span class="fifth yellow-box">?</span>
+      </div>
+      <!-- Extreme starts-->
+      <div id="extreme-level">
 
-</section> 
-</section>
-<section class="game-screen">
-<div class="easy">
-<span class="first">?</span>
-<span class="second">?</span>
-<span class="third">?</span>
-<span class="fourth">?</span>
-</div>
-<div class="medium">
+      <span class="first yellow-box">?</span>
+      <span class="second yellow-box">?</span>
+      <span class="third yellow-box">?</span>
+      <span class="fourth yellow-box">?</span>
+      <span class="fifth yellow-box">?</span>
+      <span class="sixth yellow-box">?</span>
 
-</div>
-<div class="hard">
-
-</div>
-<div class="extreme">
-
-</div>
-
-</section>
-
-    
+      </div>
+    </section>
+    <!-- Game screen starts-->
+    <script src="js/game.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
