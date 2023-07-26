@@ -1,0 +1,30 @@
+.start-screen{
+    background-image: url(images/home-page-background.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%
+}
+.header{
+    font-size: 3em;
+    text-align: center;
+}
+.container{
+    font-size: 1.7em;
+}
+.level{
+    font-size: 1em;
+    font-weight: bold;
+    list-style-type: none;
+    text-align: center;    
+}
+p{
+    font-size: 1.7em; 
+    font-weight: bold;
+    text-align: center;
+
+}
+.first{
+    box:solid 1px black ;
+}
