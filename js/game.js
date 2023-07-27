@@ -14,9 +14,8 @@ class Game{
         this.hardScreen.style.display = "none"
         this.extremeScreen.style.display = "none"
         this.easyScreen.style.display = "block"
-
       this.startScreen.style.display = "none"
-      //this.gameScreen.style.display = "block"
+      this.gameScreen.style.display = "block"
 
     }
     medium(){

@@ -5,7 +5,8 @@ window.onload = function () {
   const hardBtn = document.querySelector(".button-gold");
   const extremeBtn = document.querySelector(".button-red");
 // Easy button click
-this.gameScreen.style.display = "none"
+
+//this.gameScreen.style.display = "none"
   easyBtn.addEventListener("click", function () {
     game.easy();
   });
@@ -21,4 +22,4 @@ this.gameScreen.style.display = "none"
   extremeBtn.addEventListener("click", function () {
     game.extreme();
   });
-};
+}
