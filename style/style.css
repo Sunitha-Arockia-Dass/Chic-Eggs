@@ -8,7 +8,7 @@
     }
 
 body {
-  background-image: url(../images/background.jpeg);
+  background-image: url(../images/bg.avif);
   display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,7 +22,7 @@ body {
 .header {
   font-family: 'Rocher Jewel';
   font-size: 2em;
-  color: #9365e2;
+  color: #910131;
 }
 .choose-level {
   font-family: Rocher regular;
@@ -34,64 +34,69 @@ body {
   align-items: center;
 }
 .glossy-button {
-  
   border: none;
   border-radius: 10px;
-  padding: 8px 50px;
-  font-size: 20px;
+  padding: 15px 50px;
+  font-size: 25px;
   margin: 10px 5px;
   width: 30%;
   color: white;
-  /* text-transform: uppercase; */
   font-weight: bold;
   font-family: 'Rocher regular';
-  
+  position: relative;
+  cursor: pointer;
+}
+.glossy-button:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 50%;
+  background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2));
 }
 .button-purple{
-background-color: #be9bf7;
-box-shadow: -2px 10px 1px #be9bf7;
+  position: relative;
+  text-shadow: -1px -1px #41348e;
+  background-image: linear-gradient(#41348e,#6a5bb6);
+  box-shadow: -2px 8px 1px #41348e;
 }
 .button-green{
-  background-color: #50c287;
-  box-shadow: -2px 10px 1px #50c287;
+  position: relative;
+  text-shadow: -1px -1px darkgreen;
+  background-image: linear-gradient(green,lightgreen);
+  box-shadow: -2px 10px 1px darkgreen;
   }
   .button-gold{
-    background-color: #ec9a7e;
-    box-shadow: -2px 10px 1px #ec9a7e;
-    }
-    .button-red{
-      background-color: #ff4d5a;
-      box-shadow: -2px 10px 1px #ff4d5a;
-      }
+    position: relative;
+    text-shadow: -1px -1px gold;
+    background-image: linear-gradient(gold,rgb(162, 147, 65));
+    box-shadow: -2px 8px 1px gold;
+
+ }
+.button-red{
+    position: relative;
+    text-shadow: -1px -1px red;
+    background-image: linear-gradient(red,rgb(134, 58, 58));
+    box-shadow: -2px 8px 1px red;
+
+}
 .button-green:hover {
   background: #50c287;
-  box-shadow: -2px 10px 1px #50c287;
+  box-shadow: -2px 8px 1px #60C23D;
 }
 .button-purple:hover {
   background: #41348e;
-  box-shadow: -2px 10px 1px #6a5bb6;
+  box-shadow: -2px 8px 1px #6a5bb6;
 }
 .button-gold:hover {
   background: #ec9a7e;
-  box-shadow: -2px 10px 1px #ec9a7e;
+  box-shadow: -2px 8px 1px #9b5d48;
 }
 .button-red:hover {
   background: #ff4d5a;
-  box-shadow: -2px 10px 1px #ff4d5a;
+  box-shadow: -2px 8px 1px #c44e56;
 }
-.button-green{
-  background-image: linear-gradient(rgba(180, 194, 143, .16), rgba(187, 233, 213, .18) 50%);
-}
-.button-purple{
-  background-image: linear-gradient(rgba(119, 81, 180, .33), rgba(188, 151, 254, .30) 50%);
-}
-.button-gold{
-  background-image: linear-gradient(rgba(236, 154, 126, .28), rgba(248, 195, 179, .18) 50%);
-}
-.button-red{
-  background-image: linear-gradient(rgba(254,78,92, .68), rgba(253, 155, 158, .30) 50%);
-}
-
 
 #game-screen{
   display:none
