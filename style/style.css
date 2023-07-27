@@ -33,6 +33,65 @@ body {
   justify-content: center;
   align-items: center;
 }
+.glossy-button {
+  
+  border: none;
+  border-radius: 10px;
+  padding: 8px 50px;
+  font-size: 20px;
+  margin: 10px 5px;
+  width: 30%;
+  color: white;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  font-family: 'Rocher regular';
+  
+}
+.button-purple{
+background-color: #be9bf7;
+box-shadow: -2px 10px 1px #be9bf7;
+}
+.button-green{
+  background-color: #50c287;
+  box-shadow: -2px 10px 1px #50c287;
+  }
+  .button-gold{
+    background-color: #ec9a7e;
+    box-shadow: -2px 10px 1px #ec9a7e;
+    }
+    .button-red{
+      background-color: #ff4d5a;
+      box-shadow: -2px 10px 1px #ff4d5a;
+      }
+.button-green:hover {
+  background: #50c287;
+  box-shadow: -2px 10px 1px #50c287;
+}
+.button-purple:hover {
+  background: #41348e;
+  box-shadow: -2px 10px 1px #6a5bb6;
+}
+.button-gold:hover {
+  background: #ec9a7e;
+  box-shadow: -2px 10px 1px #ec9a7e;
+}
+.button-red:hover {
+  background: #ff4d5a;
+  box-shadow: -2px 10px 1px #ff4d5a;
+}
+.button-green{
+  background-image: linear-gradient(rgba(180, 194, 143, .16), rgba(187, 233, 213, .18) 50%);
+}
+.button-purple{
+  background-image: linear-gradient(rgba(119, 81, 180, .33), rgba(188, 151, 254, .30) 50%);
+}
+.button-gold{
+  background-image: linear-gradient(rgba(236, 154, 126, .28), rgba(248, 195, 179, .18) 50%);
+}
+.button-red{
+  background-image: linear-gradient(rgba(254,78,92, .68), rgba(253, 155, 158, .30) 50%);
+}
+
 
 #game-screen{
   display:none
