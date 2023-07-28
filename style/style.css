@@ -145,3 +145,18 @@ background-size: cover;
     background-position-y: center;
 
 }
+
+#game-screen input {
+  background-color: #E01C24;
+  height: 50px;
+  width: 50px;
+  color: #FDFDFB;
+  font-size: 3em;
+  text-align: center;
+} 
+
+
+#game-screen input:visited {
+  background-color: #FDFDFB;
+  color: #E01C24;
+}
