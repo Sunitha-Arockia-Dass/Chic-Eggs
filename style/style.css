@@ -7,7 +7,7 @@
     src: url(../font/Rocher-Regular.otf);
     }
 
-/**
+/** start screen
 kelly green - #73AE31
 rust - #B04C1E
 apple green -#8BBC20
@@ -17,9 +17,10 @@ saffron -#F4C144
 skyblue - #90D3EE
 buttersctoch -#DB8931
 dun -#DCC2A2
+#1D7F75
 **/
 
-/**
+/** game screen
 baby powder #FDFDFB
 buff #DCA169
 sea green #478D61
@@ -48,26 +49,29 @@ background-size: cover;
 .header {
   font-family: "Rocher Jewel";
   font-size: 2em;
-  color: #910131;
-  color: brown;
+  color:#E01C24;
 }
 
 .choose-level {
   font-family: Rocher regular;
+  
 }
 .level {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-flow: wrap;
+    width: 70%;
+    margin: 6% auto;
 }
 .glossy-button {
   border: none;
   border-radius: 10px;
   padding: 15px 50px;
   font-size: 25px;
-  margin: 10px 5px;
-  width: 30%;
+  margin: 25px 20px;
+  width: 35%;
   color: white;
   font-weight: bold;
   font-family: "Rocher regular";
@@ -85,40 +89,39 @@ background-size: cover;
 }
 .button-purple {
   position: relative;
-  text-shadow: -1px -1px #41348e;
-  background-image: linear-gradient(#41348e, #6a5bb6);
-  box-shadow: -2px 8px 1px #41348e;
+  text-shadow: -1px -1px #90D3EE;
+  background:#90D3EE;
+  box-shadow: -2px 8px 1px #4290af;
 }
 .button-green {
   position: relative;
-  text-shadow: -1px -1px darkgreen;
-  background-image: linear-gradient(green, lightgreen);
-  box-shadow: -2px 10px 1px darkgreen;
+  text-shadow: -1px -1px #73AE31;
+  background: #73AE31;
+  box-shadow: -2px 10px 1px #486a24;
   }
 .button-gold {
     position: relative;
-  text-shadow: -1px -1px yellow;
-  background-image: linear-gradient(yellow, rgb(162, 147, 65));
-  box-shadow: -2px 8px 1px yellow;
+  text-shadow: -1px -1px #F4C144;
+  background:#DB8931;
+  box-shadow: -2px 8px 1px #90591e;
  }
 .button-red {
     position: relative;
-    text-shadow: -1px -1px red;
-  background-image: linear-gradient(red, rgb(134, 58, 58));
-    box-shadow: -2px 8px 1px red;
-
+    text-shadow: -1px -1px #E01C24;
+    background-color: #E01C24;
+    box-shadow: -2px 8px 1px #7a181c;
 }
 .button-green:hover {
-  background: #50c287;
+  background: #8BBC20;
   box-shadow: -2px 8px 1px #60c23d;
 }
 .button-purple:hover {
-  background: #41348e;
-  box-shadow: -2px 8px 1px #6a5bb6;
+  background: #4290af;
+  box-shadow: -2px 8px 1px #1D7F75;
 }
 .button-gold:hover {
-  background: #ec9a7e;
-  box-shadow: -2px 8px 1px #9b5d48;
+  background: #F4C144;
+  box-shadow: -2px 8px 1px #DB8931;
 }
 .button-red:hover {
   background: #ff4d5a;
