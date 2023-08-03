@@ -31,10 +31,7 @@ const easyBtn = document.querySelector(".button-green");
 const mediumBtn = document.querySelector(".button-purple");
 const hardBtn = document.querySelector(".button-gold");
 const extremeBtn = document.querySelector(".button-red");
-const easyGoButton = document.getElementById("easy-go-btn");
-const mediumGoButton = document.getElementById("medium-go-btn");
-const hardGoButton = document.getElementById("hard-go-btn");
-const extremeGoButton = document.getElementById("extreme-go-btn");
+const goButton = document.querySelectorAll(".go-btn");
 const homeReloadBtn = document.querySelectorAll(".reload-btn");
 const backBtn = document.querySelectorAll(".back-btn");
 
@@ -180,22 +177,16 @@ function goBtn() {
   }
   // Stop appending if the game is over and display the hidden word
   if (game.gameOver) {
-    easyGoButton.disabled = true;
-    mediumGoButton.disabled = true;
-    hardGoButton.disabled=true;
-    extremeGoButton.disabled=true;
-
     outputBox.forEach((letter, index) => {
       letter.innerHTML = array[index];
     });
   }
 }
-//Go button event listener for each levels
+//Go button event listener 
 
-easyGoButton.addEventListener("click", goBtn);
-mediumGoButton.addEventListener("click", goBtn);
-hardGoButton.addEventListener("click", goBtn);
-extremeGoButton.addEventListener("click", goBtn);
+goButton.forEach((item)=>{
+  item.addEventListener("click",goBtn)
+})
 
 //Click function for all icons
 const infoBtn = document.querySelector(".button-saffon");
@@ -224,8 +215,6 @@ homeReloadBtn.forEach((item) => {
   item.addEventListener("click", function () {
     game.reload(game.level);
     game.gameOver = false;
-    easyGoButton.removeAttribute("disabled");
-    mediumGoButton.removeAttribute("disabled");
     outputBox.forEach((letter, index) => {
       letter.innerHTML = "?";
     });
@@ -233,26 +222,20 @@ homeReloadBtn.forEach((item) => {
       case "easy":
         game.easy(threeWords);
         array = Array.from(game.randomWord);
-        //game.trial=4
         break;
       case "medium":
         game.medium(fourWords);
         array = Array.from(game.randomWord);
-        //game.trial=5
         break;
       case "hard":
         game.hard(fiveWords);
         array = Array.from(game.randomWord);
-        //game.trial=6
         break;
       case "extreme":
         game.extreme(sixWords);
         array = Array.from(game.randomWord);
-        //game.trial=7
         break;
     }
-    // game.compareWords(array,word,game.trial)
-    game.gameWinLose();
   });
 });
 
