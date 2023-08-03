@@ -10,91 +10,417 @@
   <body>
     <!-- Game start screen starts-->
     <section id="start-screen">
+      <button class="glossy-button button-saffon btn">info</button>
       <section class="header">
+        
         <div class="title">Chic & Eggs</div>
       </section>
       <section class="container">
+        
         <h1 class="choose-level">Levels</h1>
-
+        <!-- <img class="rules-btn" src="../images/rules-btn.png"/> -->
         <div class="level">
-          <button class="grays glossy-button button-green">Easy</button>
-          <button class="grays glossy-button button-purple">
-            Medium
-          </button>
-          <button class="grays glossy-button button-gold">Hard</button>
-          <button class="grays glossy-button button-red">
-            Extreme
-          </button>
+          <button class=" glossy-button button-green">Easy</button>
+          <button class=" glossy-button button-purple">Medium</button>
+          <button class=" glossy-button button-gold">Hard</button>
+          <button class=" glossy-button button-red">Extreme</button>
         </div>
       </section>
+      <section id="info-pop-up">
+        <div class="info-container">
+        <div><button class="close-btn"></button></div>
+        <div class="information">
+        <ul class="info">
+          <li>Information and rules</li>
+          <li>Discover the hidden word!</li>
+          <li>Click the box to start entering the letter.</li>
+          <li>Click “Go” or use “Enter” to submit the word.</li>
+          <li>Enter only alphabets.</li>
+          <li>Do not repeat the letter.</li> 
+        </ul>
+
+<ul class="info-level">
+  <li>LEVELS</li>
+  <li>EASY - 3 Letter word</li>
+  <li>MEDIUM -4 Letter word</li>
+  <li>HARD -5 Letter word</li>
+  <li>EXTREME - 6 Letter word</li>
+</ul>
+</div> 
+<div class="image-section">
+  <ul><li><span class="chick-img"></span>Chick = correct letter, correct position.</li>
+        <li><span class="egg-broke-img"></span>Egg = correct letter, wrong position.</li>
+        <li><span class="crow"></span> Crow=Wrong letter.</li>
+   </ul>
+</div>  
+        
+          
+</div>
+       </section>
     </section>
     <!-- Game start screen ends-->
 
     <!-- Game screen starts-->
     <section id="game-screen">
-        <!--Easy starts-->
-      <div id="easy-level">
-        <div class = "input-word">
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-      </div>
-
-        <!-- <span class="first yellow-box">?</span>
-        <span class="second yellow-box">?</span>
-        <span class="third yellow-box">?</span> -->
-     
-      <div class = "input-word">
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-      </div>
-      </div>
-      <!-- Medium starts-->
-      <div id="medium-level">
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-
-
-      <!-- <span class="first yellow-box">?</span>
-      <span class="second yellow-box">?</span>
-      <span class="third yellow-box">?</span>
-      <span class="fourth yellow-box">?</span> -->
-    </div>
-    <!-- Hard starts-->
-      <div id="hard-level">
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-
-
-      <!-- <span class="first yellow-box">?</span>
-      <span class="second yellow-box">?</span>
-      <span class="third yellow-box">?</span>
-      <span class="fourth yellow-box">?</span>
-      <span class="fifth yellow-box">?</span> -->
-      </div>
-      <!-- Extreme starts-->
-      <div id="extreme-level">
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
-        <input type="text" value="?" minlength="1" maxlength="1" required>
+      <!--Easy starts-->
+      <div class="container">
+         
+        <div id="easy-level">
+          <!-- This section for buttons-->
+        <div class="button-section">
+          <img class="back-btn btn" src="../images/back-button.png"/>
+            <img class="reload-btn btn" src="../images/reload-button.png"/>
+            
+        </div>
+     <!-- This section for buttons--> 
+            <!-- This section shows result -->
+          <!-- trial section starts
+          this section is for displaying number of trials -->
+          <section class="inner-container">
+            <section class="trials">
+              <div class="trial-img">
+              <div class="trial-content easy">Trial<p></p>
+              </div>
+          </section>
+            <!-- trial section ends -->
+            <!-- Displays input field starts -->
+            <section class="input-word input-attempt">
+              <div class="display-output"><div class="result" >
+                <span class="output-box easy">?</span>
+                <span class="output-box easy">?</span>
+                <span class="output-box easy">?</span>
+              </div> 
+              
+            </div>
+               <div style="display:none" id="wrong-attempt-template">
+                <div class="wrong-attempt-template easy">
+                  <div class="input-word">
+                    <div class="left-input">
+                    <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                    <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                    <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                  </div>                
+                  </div>
+                  <div class="right-output ">
+                    <span class="chick-img"><span class="chick-value easy">0</span><img src="images/chicks.gif" /></span>
+                    <span class="egg-broke-img"><span class="egg-value easy"></span><img src="images/egg-broke.gif" /></span>
+                    <span class="crow"><span class="crow-value easy"></span><img src="images/crow.gif" /></span>
+                
+                  </div>
+              </div>
+              </div>
+              <div class="earlier-attempts easy" >
 
 
-      <!-- <span class="first yellow-box">?</span>
-      <span class="second yellow-box">?</span>
-      <span class="third yellow-box">?</span>
-      <span class="fourth yellow-box">?</span>
-      <span class="fifth yellow-box">?</span>
-      <span class="sixth yellow-box">?</span> -->
+              </div> 
+              <div class="attempt" class="input-word">
+                <div class="left-input">
+                <input class="common easy" type="text" minlength="1" maxlength="1" id="first" onkeyup="movetoNext(this, 'second')" required />
+                <input class="common easy" type="text" minlength="1" maxlength="1" id="second" onkeyup="movetoNext(this, 'third')" required />
+                <input class="common easy" type="text" minlength="1" maxlength="1" id="third" required />
+                <button class="glossy-button button-green go-btn easy" id="easy-go-btn">Go</button>
+    
+               </div>
+               
+              </div>
+            </section>
+            <!-- Displays input field ends -->
+            <!-- Displays game rules and info starts-->
+            <section class="rules-info">
+              <div class="right-output"><div class="chick-img"><img src="images/chicks.gif" />Correct Letter - Correct Position</div>
+                <div class="egg-broke-img"><img src="images/egg-broke.gif" />Correct Letter - Wrong Position</div>
+                <div class="crow"><img src="images/crow.gif" />Wrong Letter</div>
+              </div>
+            </section>
+          </section>
+           <!-- Displays game rules and info ends-->
 
+          </div>
+           <!-- Displays winning  and lose ends-->
+          
+            
+        
+        <!-- Medium starts-->
+       
+         
+          <div id="medium-level">
+            <!-- This section for buttons-->
+          <div class="button-section">
+            <img class="back-btn btn" src="images/back-button.png"/>
+              <img class="reload-btn btn" src="images/reload-button.png"/>
+          </div>
+       <!-- This section for buttons--> 
+              <!-- This section shows result -->
+            <!-- trial section starts
+            this section is for displaying number of trials -->
+            <section class="inner-container">
+              <section class="trials">
+                <div class="trial-img">
+                <div class="trial-content medium">Trial<p></p>
+                </div>
+            </section>
+              <!-- trial section ends -->
+              <!-- Displays input field starts -->
+              <section class="input-word input-attempt">
+                <div class="display-output"><div class="result" >
+                  <span class="output-box medium">?</span>
+                  <span class="output-box medium">?</span>
+                  <span class="output-box medium">?</span>
+                  <span class="output-box medium">?</span>
+                </div> 
+                
+              </div>
+                 <div style="display:none" id="wrong-attempt-template">
+                  <div class="wrong-attempt-template medium">
+                    <div class="input-word">
+                      <div class="left-input">
+                      <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                      <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                      <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                      <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+
+                    </div>                
+                    </div>
+                    <div class="right-output ">
+                      <span class="chick-img"><span class="chick-value medium"></span><img src="images/chicks.gif" /></span>
+                      <span class="egg-broke-img"><span class="egg-value medium"></span><img src="images/egg-broke.gif" /></span>
+                      <span class="crow"><span class="crow-value medium"></span><img src="images/crow.gif" /></span>
+                  
+                    </div>
+                </div>
+                </div>
+                <div class="earlier-attempts medium">
+  
+  
+                </div> 
+                <div class="attempt" class="input-word">
+                  <div class="left-input">
+                  <input class="common medium" type="text" minlength="1" maxlength="1" id="one" onkeyup="movetoNext(this, 'two')" required />
+                  <input class="common medium" type="text" minlength="1" maxlength="1" id="two" onkeyup="movetoNext(this, 'three')" required />
+                  <input class="common medium" type="text" minlength="1" maxlength="1" id="three" onkeyup="movetoNext(this, 'four')" required />
+                  <input class="common medium" type="text" minlength="1" maxlength="1" id="four" required />
+                  <button class="glossy-button button-green go-btn medium" id="medium-go-btn">Go</button>
+      
+                 </div>
+                 
+                </div>
+              </section>
+              <!-- Displays input field ends -->
+              <!-- Displays game rules and info starts-->
+              <section class="rules-info">
+                <div class="right-output"><div class="chick-img"><img src="images/chicks.gif" />Correct Letter - Correct Position</div>
+                  <div class="egg-broke-img"><img src="images/egg-broke.gif" />Correct Letter - Wrong Position</div>
+                  <div class="crow"><img src="images/crow.gif" />Wrong Letter</div>
+                </div>
+              </section>
+            </section>
+             <!-- Displays game rules and info ends-->
+  
+            </div>
+             <!-- Displays winning  and lose ends-->
+             <div id="hard-level">
+              <!-- This section for buttons-->
+            <div class="button-section">
+              <img class="back-btn btn" src="images/back-button.png"/>
+                <img class="reload-btn btn" src="images/reload-button.png"/>
+            </div>
+         <!-- This section for buttons--> 
+                <!-- This section shows result -->
+              <!-- trial section starts
+              this section is for displaying number of trials -->
+              <section class="inner-container">
+                <section class="trials">
+                  <div class="trial-img">
+                  <div class="trial-content hard">Trial<p></p>
+                  </div>
+              </section>
+                <!-- trial section ends -->
+                <!-- Displays input field starts -->
+                <section class="input-word input-attempt ">
+                  <div class="display-output"><div class="result" >
+                    <span class="output-box hard">?</span>
+                    <span class="output-box hard">?</span>
+                    <span class="output-box hard">?</span>
+                    <span class="output-box hard">?</span>
+                    <span class="output-box hard">?</span>
+                  </div> 
+                  
+                </div>
+                   <div style="display:none" id="wrong-attempt-template">
+                    <div class="wrong-attempt-template hard">
+                      <div class="input-word">
+                        <div class="left-input">
+                        <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                        <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                        <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                        <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                        <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                      </div>                
+                      </div>
+                      <div class="right-output ">
+                        <span class="chick-img"><span class="chick-value hard"></span><img src="images/chicks.gif" /></span>
+                        <span class="egg-broke-img"><span class="egg-value hard"></span><img src="images/egg-broke.gif" /></span>
+                        <span class="crow"><span class="crow-value hard"></span><img src="images/crow.gif" /></span>
+                    
+                      </div>
+                  </div>
+                  </div>
+                  <div class="earlier-attempts hard" >
+    
+    
+                  </div> 
+                  <div class="attempt" class="input-word">
+                    <div class="left-input">
+                    <input class="common hard" type="text" minlength="1" maxlength="1" id="onef" onkeyup="movetoNext(this, 'twot')" required />
+                    <input class="common hard" type="text" minlength="1" maxlength="1" id="twot" onkeyup="movetoNext(this, 'three3')" required />
+                    <input class="common hard" type="text" minlength="1" maxlength="1" id="three3" onkeyup="movetoNext(this, 'fourf')" required />
+                    <input class="common hard" type="text" minlength="1" maxlength="1" id="fourf" onkeyup="movetoNext(this, 'fivef')" required />
+                    <input class="common hard" type="text" minlength="1" maxlength="1" id="fivef" required />
+                    <button class="glossy-button button-green go-btn hard" id="hard-go-btn">Go</button>
+        
+                   </div>
+                   
+                  </div>
+                </section>
+                <!-- Displays input field ends -->
+                <!-- Displays game rules and info starts-->
+                <section class="rules-info">
+                  <div class="right-output"><div class="chick-img"><img src="images/chicks.gif" />Correct Letter - Correct Position</div>
+                    <div class="egg-broke-img"><img src="images/egg-broke.gif" />Correct Letter - Wrong Position</div>
+                    <div class="crow"><img src="images/crow.gif" />Wrong Letter</div>
+                  </div>
+                </section>
+              </section>
+               <!-- Displays game rules and info ends-->
+    
+              </div>
+              <div id="extreme-level">
+                <!-- This section for buttons-->
+              <div class="button-section">
+                <img class="back-btn btn" src="images/back-button.png"/>
+                  <img class="reload-btn btn" src="images/reload-button.png"/>
+              </div>
+           <!-- This section for buttons--> 
+                  <!-- This section shows result -->
+                <!-- trial section starts
+                this section is for displaying number of trials -->
+                <section class="inner-container">
+                  <section class="trials">
+                    <div class="trial-img">
+                    <div class="trial-content extreme">Trial<p></p>
+                    </div>
+                </section>
+                  <!-- trial section ends -->
+                  <!-- Displays input field starts -->
+                  <section class="input-word input-attempt">
+                    <div class="display-output"><div class="result" >
+                      <span class="output-box extreme">?</span>
+                      <span class="output-box extreme">?</span>
+                      <span class="output-box extreme">?</span>
+                      <span class="output-box extreme">?</span>
+                      <span class="output-box extreme">?</span>
+                      <span class="output-box extreme">?</span>
+                    </div> 
+                    
+                  </div>
+                     <div style="display:none" id="wrong-attempt-template">
+                      <div class="wrong-attempt-template extreme">
+                        <div class="input-word">
+                          <div class="left-input">
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required />
+                          <input class="common" disabled type="text" minlength="1" maxlength="1" required /> 
+                        </div>                
+                        </div>
+                        <div class="right-output ">
+                          <span class="chick-img"><span class="chick-value extreme"></span><img src="images/chicks.gif" /></span>
+                          <span class="egg-broke-img"><span class="egg-value extreme"></span><img src="images/egg-broke.gif" /></span>
+                          <span class="crow"><span class="crow-value extreme"></span><img src="images/crow.gif" /></span>
+                      
+                        </div>
+                    </div>
+                    </div>
+                    <div class="earlier-attempts extreme" >
+      
+      
+                    </div> 
+                    <div class="attempt" class="input-word">
+                      <div class="left-input">
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="firstf" onkeyup="movetoNext(this, 'seconds')" required />
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="seconds" onkeyup="movetoNext(this, 'thirdt')" required />
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="thirdt" onkeyup="movetoNext(this, 'fourthf')" requir[56ed />
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="fourthf" onkeyup="movetoNext(this, 'fivthf')" requi5cred />
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="fivthf" onkeyup="movetoNext(this, 'sixs')" required />
+                      <input class="common extreme" type="text" minlength="1" maxlength="1" id="sixs" required />
+                      <button class="glossy-button button-green go-btn extreme" id="extreme-go-btn">Go</button>
+          
+                     </div>
+                     
+                    </div>
+                  </section>
+                  <!-- Displays input field ends -->
+                  <!-- Displays game rules and info starts-->
+                  <section class="rules-info">
+                    <div class="right-output"><div class="chick-img"><img src="images/chicks.gif" />Correct Letter - Correct Position</div>
+                      <div class="egg-broke-img"><img src="images/egg-broke.gif" />Correct Letter - Wrong Position</div>
+                      <div class="crow"><img src="images/crow.gif" />Wrong Letter</div>
+                    </div>
+                  </section>
+                </section>
+                 <!-- Displays game rules and info ends-->
+      
+                </div>
+          
+             
+              
+          </div>   
+           <!-- Medium ends-->
+          <!-- Hard starts-->
+        <div id="hard-level">
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+
+        </div>
+        <!-- Extreme starts-->
+        <div id="extreme-level">
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+          <input type="text" value="?" minlength="1" maxlength="1" required />
+
+        </div>
+        <section id="pop-up">
+    
+          <div class="win-display">  
+            <div class="popup-buttons">
+            <button id="win-close-btn" class="close-btn"></button>
+           </div>
+             <audio controls id="congrats" style="visibility: hidden;">
+              <source src="./audio/win.mp3" type="audio/mpeg">
+            </audio> 
+          
+           <p></p>
+          </div>
+         <div class="lose-display">
+          <div class="popup-buttons">
+            <button id="lose-close-btn" class="close-btn"></button>
+           </div>
+          
+          <audio controls id="sorry" style="visibility: hidden;">
+            <source src="./audio/oh-no.mp3" type="audio/mpeg">
+            
+          <p></p>
+         </div>
+         </section>
+         <!-- Displays winning  and lose ends-->
       </div>
     </section>
     <!-- Game screen starts-->
