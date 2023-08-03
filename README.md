@@ -1,6 +1,6 @@
 <div align="center">
 
- Chic & Eggs 
+# ![] ~ ~ ~ Chic & Eggs ~ ~ ~ ![]
 
 ![](./images/readme-home.png)
 
