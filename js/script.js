@@ -128,10 +128,13 @@ function hintButton() {
         break;
      case "hard":
      case "extreme":
+      if(randomHint!==randomHint2){
         hintButton.forEach((item) => {
            item.innerHTML = `"${array[randomHint]}" and "${array[randomHint2]}" are in the hidden word`;
         });
+      }
   }
+
   return;
 }
 window.onload = function () {
@@ -189,7 +192,6 @@ window.onload = function () {
      game.easy(threeWords, word);
      array = game.array;
      appendVariable();
-     console.log(array);
      hintButton();
   });
   // Medium button click(level selection)
@@ -197,7 +199,6 @@ window.onload = function () {
      game.medium(fourWords);
      array = game.array;
      appendVariable();
-     console.log(array);
      hintButton();
   });
   // Hard button click(level selection)
@@ -206,7 +207,6 @@ window.onload = function () {
      game.trialResult.innerText = game.trial;
      array = game.array;
      appendVariable();
-     console.log(array);
      hintButton();
   });
   // Extreme button click(level selection)
@@ -215,7 +215,6 @@ window.onload = function () {
      game.trialResult.innerText = game.trial;
      array = game.array;
      appendVariable();
-     console.log(array);
      hintButton();
   });
 };
@@ -247,13 +246,13 @@ function goBtn() {
      inputError = true;
   }
   //To check if it has any repeated letters
-  if (word.filter((e, i, a) => a.indexOf(e) !== i).length > 0) {
+  else if (word.filter((e, i, a) => a.indexOf(e) !== i).length > 0) {
      alert("Please do not repeat the letter");
      inputError = true;
   }
   //To check if the input has only alphabets
   const alphabetPattern = /^[A-Za-z]+$/;
-  if (!alphabetPattern.test(word.join(""))) {
+   if (!alphabetPattern.test(word.join(""))) {
      alert("Please enter alphabets only");
      inputError = true;
   }
