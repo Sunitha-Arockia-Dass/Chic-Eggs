@@ -35,14 +35,14 @@ body {
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  background:#C7ECF6;
 }
 
 #game-screen {
   display: none;
-  background-image: url(../images/cloud-bg.avif);
   width: 100%;
-  background-size: cover;
-  min-height: 1000px;
+  background: #000;
+ 
 }
 
 #game-screen input {
@@ -167,21 +167,14 @@ img.rules-btn {
   box-shadow: -2px 8px 1px #c44e56;
 }
 
-#game-screen {
-  display: none;
-  background-image: url(../images/cloud-bg.avif);
-  width: 100%;
-  background-size: cover;
-  min-height: 1000px;
-}
 
 #game-screen input,
 #game-screen .output-box {
   background-color: #e01c24;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   color: #fdfdfb;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
   border: 2px solid white;
   text-align: center;
@@ -203,7 +196,7 @@ img.rules-btn {
   color: #e01c24;
 }
 #game-screen .input-attempt span img {
-  width: 45px;
+  width: 30px;
   margin: 0 10px;
 }
 .wrong-attempt-template {
@@ -211,12 +204,12 @@ img.rules-btn {
   flex-direction: row;
 }
 #game-screen .input-word span.crow img {
-  width: 50px;
+  width: 40px;
 }
 #game-screen .earlier-attempts .right-output span {
   display: flex;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: "Rocher regular";
 }
 #game-screen .rules-info .right-output {
@@ -225,12 +218,17 @@ img.rules-btn {
   display: contents;
 }
 #game-screen .container {
-  background-image: url(../images/game-screen.jpg);
-  background-size: cover;
-  width: 100%;
-  margin: 0 auto;
-  height: 1000px;
-  background-repeat: no-repeat;
+  background-image: url(../images/game-screen.png);
+    background-size: contain;
+    width: 1024px;
+    margin: 0 auto;
+    height: 900px;
+    background-repeat: no-repeat;
+    margin-top: 36px;
+}
+#game-screen #extreme-level{
+  height: 30px;
+    width: 30px;
 }
 #easy-level {
   display: none;
@@ -250,16 +248,17 @@ img.rules-btn {
 #game-screen #hard-level,
 #game-screen #extreme-level {
   padding-top: 5%;
-  width: 60%;
-  margin-left: 25%;
+  width: 80%;
+  margin: 0 10%;
   text-align: left;
 }
 #game-screen .input-word .button-green {
-  width: 100px;
+  width: 70px;
   padding: 3px;
   box-shadow: -2px 6px 1px #486a24;
-  margin: 8px 30px 8px 10px;
-  height: 40px;
+  margin: 3px 17px 4px 4px;
+  height: 30px;
+  font-size: 20px;
 }
 
 #game-screen .right-output {
@@ -287,7 +286,7 @@ img.rules-btn {
 }
 
 #game-screen .trials {
-  width: 20%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,10 +295,11 @@ img.rules-btn {
 }
 .trial-img {
   background-image: url(../images/trial-message.png);
-  width: 250px;
-  height: 250px;
-  background-size: cover;
+  width: 170px;
+  height: 170px;
+  background-size: contain;
   position: relative;
+  background-repeat: no-repeat;
 }
 #game-screen .trial-content p {
   text-align: center;
@@ -310,8 +310,8 @@ img.rules-btn {
 }
 .trial-content {
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 35%;
+  left: 35%;
   font-family: "Rocher regular";
   font-size: 20px;
   color: #db8931;
@@ -404,6 +404,61 @@ img.rules-btn {
 }
 .button-section .btn {
   width: 50px;
+}
+.hint-btn {
+  background:url(../images/hint.png);
+  height: 50px;
+  background-size: cover;
+}
+ 
+.tooltip {
+  display:inline-block;
+  position:relative;
+  border-bottom:1px dotted #666;
+  text-align:left;
+}
+
+.tooltip .bottom {
+  min-width:200px; 
+  top:40px;
+  left:50%;
+  transform:translate(-50%, 0);
+  padding:10px 20px;
+  color:#830101;
+  background-color:#f4c144;
+  font-weight: 600;
+  font-size:20px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  display:none;
+}
+
+.tooltip:hover .bottom {
+  display:block;
+}
+
+.tooltip .bottom i {
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+.tooltip .bottom i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,50%) rotate(45deg);
+  background-color:#f4c144;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 #pop-up .close-btn {
   background: url(../images/close-button.png);
