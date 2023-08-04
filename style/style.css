@@ -36,12 +36,13 @@ body {
   justify-content: center;
   text-align: center;
   background:#C7ECF6;
+  overflow:hidden;
 }
 
 #game-screen {
   display: none;
   width: 100%;
-  background: #000;
+  background: #80aa80;
  
 }
 
@@ -222,9 +223,9 @@ img.rules-btn {
     background-size: contain;
     width: 1024px;
     margin: 0 auto;
-    height: 900px;
+    height: 940px;
     background-repeat: no-repeat;
-    margin-top: 36px;
+    
 }
 #game-screen #extreme-level{
   height: 30px;
